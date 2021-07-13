@@ -1,9 +1,7 @@
-from mmap import ACCESS_DEFAULT
 from random import randint
 
+# Prints and returns a programming language if it is in the list of languages
 def favorite_programming_language(list_of_languages):
-    # Write a function that takes in a list of programming languages and prompts the user for their favorite language.
-    # If that language is in the list, return it and print it to the console
     user_input = input("What is your favorite programming language?")
     if user_input in list_of_languages:
         print(user_input)
@@ -11,16 +9,17 @@ def favorite_programming_language(list_of_languages):
     else:
         return None
 
+# Returns a random number between (not including) a max and min value
 def random_number_between_max_and_min(max, min):
-    # return a random number between max and min
     return randint(max - 1, min + 1)
 
+# Reverses a string
 def reverse_word(word):
     new_word = [word[-i] for i in range(1, len(word)+1)]
     return "".join(new_word)
 
+# Similar to fizz buzz. Banana for 4, flamingo for 7, counts 100 to 0
 def flamingo_banana():
-    # fizzbuzz, but flamingo for 7 and banana for 4
     for i in range(100, 1, -1):
         if i % 7 == 0 and i % 4 == 0:
             print("Flamingo-Banana!")
@@ -31,15 +30,18 @@ def flamingo_banana():
         else:
             print(i)
 
+# Returns a list of numbers in the provided list that are less than five
 def only_less_than_five(old_list):
     return [number for number in old_list if number < 5]
 
+# Returns a list of unique numbers in the provided list that are less than five
 def only_less_than_five_no_duplicates(old_list):
     new_list = []
     for number in old_list:
         if number < 5 and number not in new_list:
             new_list.append(number)
 
+# Gets user name and age and prints the year the user will be 100
 def when_will_you_turn_100():
     user_name = input("What is your name?")
     user_age = int(input("How old are you?"))
@@ -48,17 +50,16 @@ def when_will_you_turn_100():
 
     print(f"{user_name} will be 100 in the year {year_user_turns_100}!")
 
+# Finds all the values that list1 and list2 share
 def common_values_of_two_lists(list1, list2):
     common_values = []
     for value in list1:
         if value in list2 and value not in common_values:
             common_values.append(value)
-    for value in list2:
-        if value in list1 and value not in common_values:
-            common_values.append(value)
 
     return common_values
 
+# Returns a boolean whether or not two words are anagrams
 def are_words_anagrams(word1, word2):
     if len(word1) != len(word2):
         return False
@@ -70,6 +71,7 @@ def are_words_anagrams(word1, word2):
     else:
         return True
 
+# Returns a string with every word in the original phrase reversed
 def reverse_every_word(phrase):
     split_phrase = phrase.split(" ")
     for word in split_phrase:
@@ -77,6 +79,7 @@ def reverse_every_word(phrase):
 
     return " ".join(split_phrase)
 
+# Prints an inverted pyramid based on the number of stars the user indicates
 def inverted_pyramid():
     top_row_count = int(input("How many stars do you want in the first row?"))
     output = ""
@@ -85,6 +88,7 @@ def inverted_pyramid():
 
     print(output)
 
+# Calls each of the above functions for testing and review
 def main():
     print("Starting program")
 
