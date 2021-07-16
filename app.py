@@ -20,7 +20,7 @@ def reverse_word(word):
 
 # Similar to fizz buzz. Banana for 4, flamingo for 7, counts 100 to 0
 def flamingo_banana():
-    for i in range(100, 1, -1):
+    for i in range(100, 0, -1):
         if i % 7 == 0 and i % 4 == 0:
             print("Flamingo-Banana!")
         elif i % 4 == 0:
